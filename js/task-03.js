@@ -1,12 +1,12 @@
-let massage = prompt('Введите пароль')
+let message = prompt('Введите пароль')
 const ADMIN_PASSWORD = 'jqueryismyjam';
 
-if (massage === null) {
-    massage = 'Отменено пользователем!';
-} else if (massage === ADMIN_PASSWORD) {
-    massage = 'Добро пожаловать!';
+if (message === null) {
+    message = 'Отменено пользователем!';
+} else if (message === ADMIN_PASSWORD) {
+    message = 'Добро пожаловать!';
 } else {
-    massage = 'Доступ запрещен, неверный пароль!';
+    message = 'Доступ запрещен, неверный пароль!';
 }
 
-alert(massage);
+alert(message);
