@@ -1,47 +1,49 @@
 const country = prompt('Укажите страну доставки');
-const china = 'Китай'
-const chile = 'Чили'
-const australia = 'Австралия'
-const india = 'Индия'
-const jamaica = 'Ямайка'
 const chinaDelivery = 100;
 const chileDelivery = 250;
 const australiaDelivery = 170;
 const indiaDelivery = 80;
 const jamaicaDelivery = 120;
 
-const userCountry = country.toLowerCase();
-
 let price = 0;
-let countryDelivery = userCountry;
+let countryDelivery;
 
-switch (userCountry) {
+if (country === null) {
+    console.log('Ошибка');
+} else {
+    switch (country.toLowerCase()) {
     case 'китай':
         price = chinaDelivery;
-        countryDelivery = china;
+        countryDelivery = 'Китай';
         break;
     
     case "чили":
         price = chileDelivery;
-        countryDelivery = chile;
+        countryDelivery = 'Чили';
         break;
     
     case 'австралия':
         price = australiaDelivery;
-        countryDelivery = australia;
+        countryDelivery = 'Австралия';
         break;
     
     case 'индия':
         price = indiaDelivery;
-        countryDelivery = india;
+        countryDelivery = 'Индия';
         break;
     
     case 'ямайка':
         price = jamaicaDelivery;
-        countryDelivery = jamaica;
+        countryDelivery = 'Ямайка';
         break;
     
     default:
         alert('В вашей стране доставка не доступна')
 }
-    console.log(`Доставка в ${countryDelivery} будет стоить ${price} кредитов`);
+}
+if (price > 0) {
+console.log(`Доставка в ${countryDelivery} будет стоить ${price} кредитов`);
+} else {
+    console.log('Ошибка');
+}
+    
